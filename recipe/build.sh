@@ -21,6 +21,6 @@ EOF
 
 # Download dependency licenses with dotnet-project-licenses
 tee ignored_packages.json << EOF
-["OmniSharp.Extensions*"]
+["OmniSharp.Extensions*", "Autofac"]
 EOF
 dotnet-project-licenses --input src/LanguageServer/LanguageServer.csproj -t -d license-files -ignore ignored_packages.json
