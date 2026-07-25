@@ -1,5 +1,5 @@
 {% set name = "msbuild-project-tools-server" %}
-{% set version = "0.6.6" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/tintoy/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 6b63a296778465f89c4ca5e288e45e7d9810d6ad8276e631c9f182bc540f277b
+  sha256: e8ce1259d9953158ba06c6920b05e876a9502fa183cf2770aab278ee0af1ce7f
 
 build:
   noarch: generic
