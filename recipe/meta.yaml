@@ -1,13 +1,12 @@
-{% set name = "msbuild-project-tools-server" %}
-{% set version = "0.6.6" %}
+{% set version = "0.7.0" %}
 
 package:
-  name: {{ name }}
+  name: msbuild-project-tools-server
   version: {{ version }}
 
 source:
-  url: https://github.com/tintoy/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 6b63a296778465f89c4ca5e288e45e7d9810d6ad8276e631c9f182bc540f277b
+  url: https://github.com/tintoy/msbuild-project-tools-server/archive/v{{ version }}.tar.gz
+  sha256: e8ce1259d9953158ba06c6920b05e876a9502fa183cf2770aab278ee0af1ce7f
 
 build:
   noarch: generic
@@ -22,18 +21,18 @@ requirements:
 
 test:
   commands:
-    - {{ name }} &
+    - msbuild-project-tools-server &
     - exe_pid=$!
     - trap "kill -SIGTERM ${exe_pid}" SIGTERM
 
 about:
-  home: https://github.com/tintoy/{{ name }}
+  home: https://github.com/tintoy/msbuild-project-tools-server
   license: MIT
   license_file:
     - LICENSE
     - license-files/
   summary: Language server for MSBuild intellisense (including PackageReference completion).
-  dev_url: https://github.com/tintoy/{{ name }}
+  dev_url: https://github.com/tintoy/msbuild-project-tools-server
 
 extra:
   recipe-maintainers:
